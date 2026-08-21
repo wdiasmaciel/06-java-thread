@@ -18,7 +18,11 @@ public class Main {
 
     for (i = 0; i < iteracao; i++) {
       for (j = 0; j < MAX_THREAD; j++)
-        tarefas[j].start();
+        try {
+          tarefas[j].start();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
 
       for (j = 0; j < MAX_THREAD; j++)
         try {
@@ -29,7 +33,11 @@ public class Main {
     }
 
     for (i = 0; i < resto; i++)
-      tarefas[i].start();
+      try {
+        tarefas[i].start();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
 
     for (i = 0; i < resto; i++)
       try {
@@ -38,6 +46,6 @@ public class Main {
         e.printStackTrace();
       }
 
-    System.out.println("FIM DO PROGRAMA PRINCIPAL!");  
+    System.out.println("FIM DO PROGRAMA PRINCIPAL!");
   }
 }

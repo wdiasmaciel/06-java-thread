@@ -12,7 +12,7 @@ public class CarregadorDeTarefas {
         Tarefa[] tarefas = new Tarefa[num];
 
         for(int i = 0; i < num; i++)
-            tarefas[i] = new Tarefa("Terefa" + i);
+            tarefas[i] = new Tarefa("Terefa " + i);
 
         return tarefas;
     }
