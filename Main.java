@@ -1,17 +1,17 @@
 public class Main {
-  public static final int MAX_THREAD = 7;
+  public static final int MAX_THREAD = 3;
 
   public static void main(String[] args) {
     int i, j, iteracao, resto;
-    Carregador carregador = new Carregador();
+    CarregadorDeTarefas carregador = new CarregadorDeTarefas();
     Tarefa[] tarefas = carregador.ler();
 
     /*
      * Exemplo:
-     * Tamanho do vetor de tarefas: 13
-     * MAX_THREAD: 7
-     * iteracao: 13 / 7 = 1
-     * resto: 13 % 7 = 6
+     * Tamanho do vetor de tarefas: 8
+     * MAX_THREAD: 3
+     * iteracao: 8 / 3 = 2
+     * resto: 8 % 3 = 2
      */
     iteracao = tarefas.length / MAX_THREAD;
     resto = tarefas.length % MAX_THREAD;
@@ -37,5 +37,7 @@ public class Main {
       } catch (Exception e) {
         e.printStackTrace();
       }
+
+    System.out.println("FIM DO PROGRAMA PRINCIPAL!");  
   }
 }
