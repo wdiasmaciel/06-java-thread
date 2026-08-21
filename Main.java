@@ -26,7 +26,6 @@ public class Main {
         } catch (Exception e) {
           e.printStackTrace();
         }
-      ;
     }
 
     for (i = 0; i < resto; i++)
@@ -38,6 +37,5 @@ public class Main {
       } catch (Exception e) {
         e.printStackTrace();
       }
-    ;
   }
 }
