@@ -13,7 +13,7 @@ public class Main {
      * iteracao: 13 / 7 = 1
      * resto: 13 % 7 = 6
      */
-    iteracao = tarefas.lenght / MAX_THREAD;
+    iteracao = tarefas.length / MAX_THREAD;
     resto = tarefas.length % MAX_THREAD;
 
     for (i = 0; i < iteracao; i++) {
@@ -25,9 +25,9 @@ public class Main {
     }
 
     for (i = 0; i < resto; i++)
-      tarefas[j].start();
+      tarefas[i].start();
 
     for (i = 0; i < resto; i++)
-      tarefas[j].join();
+      tarefas[i].join();
   }
 }
