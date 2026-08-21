@@ -21,13 +21,23 @@ public class Main {
         tarefas[j].start();
 
       for (j = 0; j < MAX_THREAD; j++)
-        tarefas[j].join();
+        try {
+          tarefas[j].join();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      ;
     }
 
     for (i = 0; i < resto; i++)
       tarefas[i].start();
 
     for (i = 0; i < resto; i++)
-      tarefas[i].join();
+      try {
+        tarefas[i].join();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    ;
   }
 }
