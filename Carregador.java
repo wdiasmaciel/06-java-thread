@@ -11,6 +11,9 @@ public class Carregador {
 
         Tarefa[] tarefas = new Tarefa[num];
 
+        for(int i = 0; i < num; i++)
+            tarefas[i] = "Terefa" + i;
+
         return tarefas;
     }
 }
