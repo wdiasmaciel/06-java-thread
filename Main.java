@@ -26,22 +26,22 @@ public class Main {
 
       for (j = 0; j < MAX_THREAD; j++)
         try {
-          tarefas[j].join();
+          tarefas[MAX_THREAD * i + j].join();
         } catch (Exception e) {
           e.printStackTrace();
         }
     }
 
-    for (i = 0; i < resto; i++)
+    for (j = 0; j < resto; j++)
       try {
-        tarefas[i].start();
+        tarefas[MAX_THREAD * i + j].start();
       } catch (Exception e) {
         e.printStackTrace();
       }
 
-    for (i = 0; i < resto; i++)
+    for (j = 0; j < resto; j++)
       try {
-        tarefas[i].join();
+        tarefas[MAX_THREAD * i + j].join();
       } catch (Exception e) {
         e.printStackTrace();
       }
