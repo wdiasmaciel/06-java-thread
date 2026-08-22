@@ -16,11 +16,11 @@ public class Main {
     iteracao = tarefas.length / MAX_THREAD;
     resto = tarefas.length % MAX_THREAD;
 
-    System.out.println ("Tamanho do vetor de tarefas: " + tarefas.length);
-    System.out.println ("Número máximo de threads: " + MAX_THREAD);
-    System.out.println ("Iterações: " + iteracao);
-    System.out.println ("Resto: " + resto);
-    
+    System.out.println("Tamanho do vetor de tarefas: " + tarefas.length);
+    System.out.println("Número máximo de threads: " + MAX_THREAD);
+    System.out.println("Iterações: " + iteracao);
+    System.out.println("Resto: " + resto);
+
     for (i = 0; i < iteracao; i++) {
       for (j = 0; j < MAX_THREAD; j++)
         try {
@@ -35,6 +35,8 @@ public class Main {
         } catch (Exception e) {
           e.printStackTrace();
         }
+        
+      System.out.println("Fim da iteração: " + i);
     }
 
     for (j = 0; j < resto; j++)
