@@ -13,6 +13,6 @@ public class Tarefa extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(nome + " realizada com sucesso!");
+        System.out.println(nome + " realizada com sucesso.");
     }
 }
