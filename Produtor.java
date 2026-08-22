@@ -1,7 +1,7 @@
 import java.util.Random;
 
-public class CarregadorDeTarefas {
-    public Tarefa[] ler() {
+public class Produtor {
+    public Tarefa[] produzir() {
         int min = 5;
         int max = 9;
         Random random = new Random();
