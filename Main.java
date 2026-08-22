@@ -19,7 +19,7 @@ public class Main {
     for (i = 0; i < iteracao; i++) {
       for (j = 0; j < MAX_THREAD; j++)
         try {
-          tarefas[j].start();
+          tarefas[MAX_THREAD * i + j].start();
         } catch (Exception e) {
           e.printStackTrace();
         }
