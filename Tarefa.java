@@ -7,15 +7,12 @@ public class Tarefa extends Thread {
 
     @Override
     public void run() {
-        for (int i = 1; i <= 3; i++) {
-            System.out.println(nome + " processando passo " + i + ".");
-            try {
-                // A thread tenta dormir por 1 segundo.
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        try {
+            // A thread tenta dormir por 1 segundo.
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        System.out.println(nome + " FINALIZADA COM SUCESSO!");
+        System.out.println(nome + " realizada com sucesso!");
     }
 }
