@@ -65,7 +65,7 @@ Configuração mais eficiente: 4 threads (2.3s)
 
 ---
 
-## Exercício 4: Sistema de Prioridade de Tarefas 
+## Exercício 3: Sistema de Prioridade de Tarefas 
 **Objetivo:** criar tarefas com diferentes níveis de prioridade (ALTA, MÉDIA, BAIXA) e executá-las em ordem de prioridade.
 
 ### Requisitos:
